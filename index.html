@@ -6,7 +6,7 @@
     <meta name="author" content="Samuel Anderson Machado Lopes">
     <meta name="copyright" content="© 2026 Samuel Anderson Machado Lopes">
     <meta name="description" content="Samuel Anderson Machado Lopes — Tecnologia da Informação, Desenvolvimento Web e Impressão 3D.">
-    <title>~/samuelanderson | Links</title>
+    <title>Link Hub / SamuelAnderson</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpolygon points='32,4 56,18 56,46 32,60 8,46 8,18' fill='%23121215' stroke='%2334d399' stroke-width='3.5' stroke-linejoin='round'/%3E%3Cpath d='M9 18.5L32 32L55 18.5M32 32V59' stroke='%2334d399' stroke-opacity='0.22' stroke-width='1.5' fill='none'/%3E%3Cpath d='M29 22H20C18.3 22 17 23.3 17 25V29C17 30.7 18.3 32 20 32H26C27.7 32 29 33.3 29 35V39C29 40.7 27.7 42 26 42H17' stroke='%23f4f4f5' stroke-width='4.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Cpath d='M34.5 42L39.6 23.5C39.9 22.5 41.1 22.5 41.4 23.5L46.5 42' stroke='%23f4f4f5' stroke-width='4.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Cline x1='36.5' y1='36' x2='44.5' y2='36' stroke='%2334d399' stroke-width='4.2' stroke-linecap='round'/%3E%3C/svg%3E">
 
     <!-- Tailwind CSS -->
@@ -160,11 +160,11 @@
     <!-- Fundo Interativo Sutil (Dot-Grid + Nós discretos) -->
     <canvas id="bgCanvas" aria-hidden="true"></canvas>
 
-    <!-- Wrapper Responsivo Centralizado (Celular, Tablet e Computador) -->
-    <div class="relative z-10 w-full max-w-[480px] md:max-w-[560px] lg:max-w-[600px] mx-auto px-4 sm:px-6 md:px-8 flex-1 flex flex-col items-center">
+    <!-- Wrapper Responsivo (Celular, Tablet e Computador) -->
+    <div class="relative z-10 w-full max-w-[480px] md:max-w-[560px] lg:max-w-[600px] mx-auto px-4 sm:px-6 md:px-8 flex-1 flex flex-col">
 
-        <!-- Barra Superior Minimalista (Somente Leitura, Mantendo copiar link) -->
-        <header class="w-full pt-5 sm:pt-7 flex items-center justify-between text-xs sm:text-[13px] font-mono text-zinc-400">
+        <!-- Barra Superior Minimalista (Somente Leitura) -->
+        <header class="pt-5 sm:pt-7 flex items-center justify-between text-xs sm:text-[13px] font-mono text-zinc-400">
             <div class="flex items-center gap-2.5 truncate">
                 <span class="w-2 h-2 rounded-full shrink-0" style="background-color: var(--accent);"></span>
                 <span class="truncate text-zinc-300">~/samuelanderson</span>
@@ -178,99 +178,69 @@
         </header>
 
         <!-- Conteúdo Principal -->
-        <main class="w-full my-auto py-8 sm:py-10 md:py-12 flex-1 flex flex-col items-center">
+        <main class="my-auto py-8 sm:py-10 md:py-12">
 
-            <!-- Cabeçalho do Perfil (Alinhado à Esquerda, como na Imagem) -->
-            <section class="w-full fade-in flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-5 mb-8 sm:mb-9" style="animation-delay: 0.04s;">
-                <!-- Avatar com Enquadramento Circular Fixo e Status Online -->
-                <div class="relative shrink-0">
-                    <div class="w-16 h-16 sm:w-[72px] sm:h-[72px] md:w-20 md:h-20 aspect-square rounded-full overflow-hidden border border-[#2e2e34] bg-zinc-900 shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=85"
-                             onerror="this.onerror=null; this.src='https://placehold.co/200x200/18181b/e4e4e7?text=SA';"
-                             alt="Foto de perfil de Samuel Anderson Machado Lopes"
-                             class="w-full h-full block object-cover object-[50%_20%]">
+            <!-- Cabeçalho do Perfil -->
+            <section class="fade-in flex flex-col items-start mb-8 sm:mb-9" style="animation-delay: 0.04s;">
+                <div class="flex items-center gap-4 sm:gap-5 w-full">
+                    <!-- Avatar com Enquadramento Circular Fixo -->
+                    <div class="relative shrink-0">
+                        <div class="w-16 h-16 sm:w-[72px] sm:h-[72px] md:w-20 md:h-20 aspect-square rounded-full overflow-hidden flex items-center justify-center border border-[#2e2e34] bg-zinc-900 shadow-lg">
+                            <img src="./samuel.png"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/200x200/18181b/e4e4e7?text=SA';"
+                                 alt="Foto de perfil de Samuel Anderson Machado Lopes"
+                                 class="w-full h-full block object-cover object-center scale-[1.09] -translate-x-[6%] translate-y-[6%]">
+                        </div>
+                        <!-- Indicador de Status Online -->
+                        <span class="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 rounded-full border-2 border-[#09090b] z-10"
+                              style="background-color: var(--accent);"
+                              title="Disponível para projetos"></span>
                     </div>
-                    <!-- Indicador de Status Online -->
-                    <span class="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 rounded-full border-2 border-[#09090b] z-10"
-                          style="background-color: var(--accent);"
-                          title="Disponível para projetos"></span>
-                </div>
 
-                <!-- Nome com Logo SA, Especialidade & Ações Rápidas -->
-                <div class="w-full min-w-0 flex-1 text-center sm:text-left">
-                    <h1 class="flex items-center justify-center sm:justify-start gap-2.5 text-lg sm:text-xl md:text-[22px] font-semibold tracking-tight text-zinc-50 leading-snug">
-                        <svg class="w-7 h-7 sm:w-8 sm:h-8 shrink-0" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <defs>
-                                <linearGradient id="saHexGrad" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
-                                    <stop offset="0%" stop-color="#34d399"/>
-                                    <stop offset="100%" stop-color="#059669"/>
-                                </linearGradient>
-                            </defs>
-                            <polygon points="32,4 56,18 56,46 32,60 8,46 8,18"
-                                     fill="#121215"
-                                     stroke="url(#saHexGrad)"
-                                     stroke-width="3"
-                                     stroke-linejoin="round"/>
-                            <path d="M9.5 18.8 L32 32 L54.5 18.8 M32 32 V58.5"
-                                  stroke="#34d399"
-                                  stroke-opacity="0.2"
-                                  stroke-width="1.5"
-                                  stroke-linecap="round"/>
-                            <path d="M29 22 H20 C18.3 22 17 23.3 17 25 V29 C17 30.7 18.3 32 20 32 H26 C27.7 32 29 33.3 29 35 V39 C29 40.7 27.7 42 26 42 H17"
-                                  stroke="#f4f4f5"
-                                  stroke-width="4"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"/>
-                            <path d="M34.5 42 L39.6 23.5 C39.9 22.5 41.1 22.5 41.4 23.5 L46.5 42"
-                                  stroke="#f4f4f5"
-                                  stroke-width="4"
-                                  stroke-linecap="round"
-                                  stroke-linejoin="round"/>
-                            <line x1="36.5" y1="36" x2="44.5" y2="36"
-                                  stroke="#34d399"
-                                  stroke-width="4"
-                                  stroke-linecap="round"/>
-                        </svg>
-                        <span>Samuel Anderson Machado Lopes</span>
-                    </h1>
-                    <p class="text-xs sm:text-sm font-mono text-zinc-300 mt-1">
-                        Tecnologia da Informação &amp; Impressão 3D
-                    </p>
+                    <!-- Nome, Especialidade & Ações Rápidas -->
+                    <div class="min-w-0 flex-1">
+                        <h1 class="text-lg sm:text-xl md:text-[22px] font-semibold tracking-tight text-zinc-50 leading-snug">
+                            Samuel Anderson Machado Lopes
+                        </h1>
+                        <p class="text-xs sm:text-sm font-mono text-zinc-300 mt-1">
+                            Tecnologia da Informação &amp; Impressão 3D
+                        </p>
 
-                    <!-- Ações Rápidas: Copiar @ e E-mail -->
-                    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-x-3 gap-y-1 mt-2.5 font-mono text-xs sm:text-[13px]">
-                        <button id="copyHandleBtn" type="button"
-                            class="min-h-[32px] text-zinc-300 hover:text-white transition flex items-center gap-1.5 cursor-pointer select-none focus-visible:outline-none focus-visible:underline"
-                            title="Copiar @samuelanderson">
-                            <span style="color: var(--accent);">@samuelanderson</span>
-                            <svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
-                                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                            </svg>
-                        </button>
-                        <span class="text-zinc-600" aria-hidden="true">•</span>
-                        <button id="copyEmailBtn" type="button"
-                            class="min-h-[32px] text-zinc-400 hover:text-zinc-100 transition cursor-pointer select-none focus-visible:outline-none focus-visible:underline"
-                            title="Copiar e-mail: contato@samuelanderson.dev">
-                            contato@samuelanderson.dev
-                        </button>
+                        <!-- Ações Rápidas: Copiar @ e E-mail -->
+                        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2.5 font-mono text-xs sm:text-[13px]">
+                            <button id="copyHandleBtn" type="button"
+                                class="min-h-[32px] text-zinc-300 hover:text-white transition flex items-center gap-1.5 cursor-pointer select-none focus-visible:outline-none focus-visible:underline"
+                                title="Copiar @samuelanderson">
+                                <span style="color: var(--accent);">@samuelanderson</span>
+                                <svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </button>
+                            <span class="text-zinc-600" aria-hidden="true">•</span>
+                            <button id="copyEmailBtn" type="button"
+                                class="min-h-[32px] text-zinc-400 hover:text-zinc-100 transition cursor-pointer select-none focus-visible:outline-none focus-visible:underline"
+                                title="Copiar e-mail: contato@samuelanderson.dev">
+                                contato@samuelanderson.dev
+                            </button>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Bio com Leitura Aprimorada -->
+                <p class="mt-5 text-sm sm:text-[15px] md:text-base leading-relaxed text-zinc-300">
+                    Soluções em TI, desenvolvimento web e projetos maker em impressão 3D. Acesse meus canais e portfólio abaixo.
+                </p>
             </section>
 
-            <!-- Bio Centralizada com Leitura Aprimorada -->
-            <p class="w-full text-sm sm:text-[15px] md:text-base leading-relaxed text-zinc-300 text-left mb-8 sm:mb-9">
-                Soluções em TI, desenvolvimento web e projetos maker em impressão 3D. Acesse meus canais e portfólio abaixo.
-            </p>
-
             <!-- Lista de Links -->
-            <section id="linksContainer" class="w-full flex flex-col gap-3 sm:gap-3.5" aria-label="Links e Redes Sociais">
+            <section id="linksContainer" class="flex flex-col gap-3 sm:gap-3.5" aria-label="Links e Redes Sociais">
                 <!-- Renderizado via JS -->
             </section>
         </main>
 
-        <!-- Rodapé Centralizado com Copyright -->
-        <footer class="w-full pb-6 pt-5 border-t border-[#1f1f23] flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left text-xs sm:text-[13px] font-mono text-zinc-400">
+        <!-- Rodapé com Copyright -->
+        <footer class="pb-6 pt-5 border-t border-[#1f1f23] flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left text-xs sm:text-[13px] font-mono text-zinc-400">
             <span>&copy; 2026 Samuel Anderson Machado Lopes. Todos os direitos reservados.</span>
             <span class="hidden md:inline text-zinc-500 shrink-0">atalhos: [1-4]</span>
         </footer>
@@ -297,7 +267,6 @@
                     title: 'Print Caju',
                     tag: '3d & maker',
                     url: 'https://printcaju.vercel.app',
-                    // Ícone SVG detalhado do caju facetado conforme imagem e descrições anteriores
                     icon: `<svg class="w-7 h-7 sm:w-8 sm:h-8" viewBox="0 0 512 512" fill="none" aria-hidden="true">
                         <defs>
                             <linearGradient id="pcRimGrad" x1="256" y1="160" x2="256" y2="475" gradientUnits="userSpaceOnUse">
@@ -309,6 +278,7 @@
                                 <path d="M 268 82 C 314 82, 342 118, 338 168 C 334 218, 298 264, 236 268 C 192 271, 174 252, 176 226 C 178 202, 202 192, 224 186 C 242 181, 244 156, 224 148 C 206 141, 204 124, 214 106 C 226 88, 246 82, 268 82 Z"/>
                             </clipPath>
                         </defs>
+
                         <!-- 1. Folha Verde (Superior Direita) -->
                         <path d="M 326 116 C 350 72, 405 42, 470 30 C 460 95, 425 142, 344 152 Z" fill="#070707"/>
                         <path d="M 336 116 C 358 78, 406 50, 458 39 L 342 132 Z" fill="#46C416"/>
@@ -316,40 +286,52 @@
                         <path d="M 346 138 L 404 90 L 392 135 C 376 141, 362 143, 348 144 Z" fill="#22A822"/>
                         <path d="M 404 90 L 458 43 C 448 92, 422 124, 392 135 Z" fill="#107A1C"/>
                         <path d="M 338 134 L 462 37" stroke="#070707" stroke-width="7.5" stroke-linecap="round"/>
-                        <!-- 2. Base Hexagonal / Escudo Facetado conforme imagem de referência -->
+
+                        <!-- 2. Base Hexagonal / Escudo Facetado -->
                         <path d="M 122 184 L 210 152 L 336 172 L 374 188 L 424 294 L 368 424 L 234 487 L 114 418 L 67 286 Z" fill="#070707"/>
                         <path d="M 130 192 L 208 163 L 332 181 L 366 196 L 412 293 L 359 415 L 234 474 L 123 410 L 79 286 Z" fill="url(#pcRimGrad)"/>
                         <path d="M 136 199 L 206 173 L 328 190 L 359 203 L 403 292 L 352 407 L 234 463 L 130 403 L 89 286 Z" fill="#070707"/>
+
                         <!-- Facetas do Cristal / Gema -->
                         <polygon points="141,205 162,232 96,286" fill="#FFE324"/>
                         <polygon points="96,286 162,232 156,288" fill="#FFC300"/>
                         <polygon points="162,232 175,272 156,288" fill="#FFA600"/>
+
                         <polygon points="175,272 236,284 198,294 156,288" fill="#FFCA05"/>
                         <polygon points="236,284 305,274 284,294 198,294" fill="#FFB703"/>
                         <polygon points="198,294 284,294 244,338" fill="#FF9E00"/>
                         <polygon points="156,288 198,294 244,338" fill="#FF8500"/>
                         <polygon points="284,294 320,288 244,338" fill="#FF7B00"/>
+
                         <polygon points="334,202 353,208 344,240" fill="#FFD60A"/>
                         <polygon points="353,208 395,292 344,240" fill="#FFAA00"/>
                         <polygon points="344,240 395,292 320,288" fill="#FF8C00"/>
                         <polygon points="305,274 344,240 320,288" fill="#FF9E00"/>
                         <polygon points="305,274 320,288 284,294" fill="#FFA800"/>
+
                         <polygon points="96,286 156,288 116,344" fill="#FF7700"/>
                         <polygon points="156,288 176,422 116,344" fill="#FF5E00"/>
                         <polygon points="116,344 176,422 135,398" fill="#F54B00"/>
+
                         <polygon points="156,288 244,338 176,422" fill="#FF5400"/>
                         <polygon points="244,338 234,455 176,422" fill="#F23E00"/>
+
                         <polygon points="244,338 320,288 292,427" fill="#EE3D00"/>
                         <polygon points="244,338 292,427 234,455" fill="#DC2F00"/>
+
                         <polygon points="320,288 395,292 372,348" fill="#FF7300"/>
                         <polygon points="320,288 372,348 292,427" fill="#F55500"/>
                         <polygon points="372,348 346,402 292,427" fill="#E64200"/>
+
                         <line x1="155" y1="286" x2="178" y2="424" stroke="#070707" stroke-width="7" stroke-linecap="round"/>
                         <line x1="321" y1="286" x2="290" y2="429" stroke="#070707" stroke-width="7" stroke-linecap="round"/>
+
                         <path d="M 164 226 C 154 248, 168 278, 224 285 C 282 291, 336 266, 346 232 C 350 218, 342 204, 330 198 L 172 204 Z" fill="#070707"/>
+
                         <!-- 3. Castanha / Caju Estilizado em Primeiro Plano -->
                         <path d="M 268 82 C 314 82, 342 118, 338 168 C 334 218, 298 264, 236 268 C 192 271, 174 252, 176 226 C 178 202, 202 192, 224 186 C 242 181, 244 156, 224 148 C 206 141, 204 124, 214 106 C 226 88, 246 82, 268 82 Z"
                               fill="#070707" stroke="#070707" stroke-width="18" stroke-linejoin="round"/>
+
                         <g clip-path="url(#pcCashewClip)">
                             <rect x="165" y="75" width="185" height="205" fill="#FFD000"/>
                             <polygon points="200,80 295,80 265,155 195,155" fill="#FFE119"/>
@@ -359,8 +341,10 @@
                             <polygon points="295,110 348,115 345,205 295,175" fill="#FF7700"/>
                             <polygon points="295,175 345,205 315,268 265,268" fill="#F54E00"/>
                             <polygon points="240,242 315,225 305,272 210,272" fill="#E83B00"/>
+
                             <path d="M 214 128 C 216 112, 228 98, 246 93 C 242 103, 228 114, 222 130 Z" fill="#FFFCE6"/>
                             <path d="M 251 151 C 251 174, 238 196, 212 204 C 204 206, 200 201, 206 195 C 225 188, 236 172, 238 154 Z" fill="#FFFCE6"/>
+
                             <path d="M 254 80 C 262 102, 292 108, 314 102 C 296 118, 256 116, 246 92 Z" fill="#070707"/>
                             <path d="M 288 140 C 304 168, 310 198, 305 232 L 295 224 C 297 215, 296 208, 294 202 L 268 214 L 292 194 C 293 176, 290 158, 288 140 Z" fill="#070707"/>
                         </g>
@@ -369,7 +353,7 @@
                 {
                     title: 'Portfólio & Projetos',
                     tag: 'dev / ti',
-                    url: 'https://samuelanderson.vercel.app',
+                    url: 'https://samuel123d.github.io/',
                     icon: `<svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 32 32" fill="none" aria-hidden="true">
                         <rect x="2" y="2" width="28" height="28" rx="7" fill="#090D16" stroke="#1E293B" stroke-width="1.2"/>
                         <path d="M11.5 11L6.5 16L11.5 21" stroke="#22D3EE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -380,7 +364,7 @@
                 {
                     title: 'WhatsApp',
                     tag: 'contato',
-                    url: 'https://wa.me/5584999568739',
+                    url: 'https://wa.me/5584987115381',
                     icon: `<svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 32 32" fill="none" aria-hidden="true">
                         <circle cx="16" cy="16" r="14" fill="#25D366"/>
                         <path d="M16.05 7.5C11.35 7.5 7.55 11.28 7.55 15.95C7.55 17.44 7.94 18.9 8.69 20.18L7.48 24.58L12.01 23.4C13.24 24.07 14.63 24.42 16.05 24.42C20.75 24.42 24.55 20.64 24.55 15.97C24.55 11.3 20.75 7.5 16.05 7.5ZM20.99 19.48C20.78 20.07 19.77 20.61 19.28 20.68C18.84 20.75 18.29 20.78 17.68 20.58C17.31 20.46 16.84 20.31 16.24 20.05C13.71 18.96 12.06 16.41 11.93 16.24C11.8 16.07 10.9 14.87 10.9 13.63C10.9 12.39 11.55 11.78 11.78 11.53C12.01 11.28 12.28 11.22 12.45 11.22C12.62 11.22 12.79 11.22 12.93 11.23C13.09 11.24 13.3 11.17 13.5 11.66C13.71 12.17 14.22 13.41 14.28 13.54C14.35 13.67 14.39 13.82 14.3 13.99C14.22 14.16 14.17 14.27 14.04 14.42C13.91 14.57 13.77 14.75 13.66 14.87C13.53 15 13.4 15.14 13.55 15.39C13.7 15.65 14.21 16.48 14.97 17.16C15.95 18.03 16.77 18.3 17.03 18.43C17.29 18.56 17.44 18.54 17.59 18.37C17.74 18.2 18.23 17.62 18.4 17.36C18.57 17.1 18.74 17.14 18.97 17.23C19.2 17.32 20.44 17.92 20.69 18.05C20.95 18.18 21.12 18.24 21.18 18.35C21.25 18.46 21.25 18.89 20.99 19.48Z" fill="white"/>
@@ -389,7 +373,7 @@
                 {
                     title: 'Instagram',
                     tag: 'social',
-                    url: 'https://instagram.com',
+                    url: 'https://www.instagram.com/samuel_anderson.ml/',
                     icon: `<svg class="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 32 32" fill="none" aria-hidden="true">
                         <defs>
                             <radialGradient id="igGrad" cx="30%" cy="107%" r="150%">
@@ -446,18 +430,15 @@
                 anchor.href = item.url;
                 anchor.target = '_blank';
                 anchor.rel = 'noopener noreferrer';
-                // Classes de enquadramento, toque confortável e hover conforme imagem
-                anchor.className = 'w-full slim-card fade-in group rounded-xl px-4 sm:px-5 py-3.5 flex items-center justify-between gap-3.5 select-none';
+                anchor.className = 'slim-card fade-in group rounded-xl px-4 sm:px-5 py-3.5 flex items-center justify-between gap-3.5 select-none';
                 anchor.style.animationDelay = `${0.08 + index * 0.05}s`;
                 anchor.setAttribute('aria-label', `${item.title} (${item.tag})`);
 
                 anchor.innerHTML = `
                     <div class="flex items-center gap-3.5 sm:gap-4 min-w-0 flex-1">
-                        <!-- Ícone Enquadrado -->
                         <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-zinc-900 border border-[#27272a] flex items-center justify-center shrink-0 group-hover:border-zinc-700 transition">
                             ${item.icon}
                         </div>
-                        <!-- Título e Tag -->
                         <div class="min-w-0 flex-1">
                             <span class="link-title block text-[15px] sm:text-base font-medium text-zinc-100 group-hover:text-white truncate transition">
                                 ${item.title}
@@ -468,9 +449,8 @@
                         </div>
                     </div>
 
-                    <!-- Número e Seta de Link Externo -->
                     <div class="flex items-center gap-2.5 shrink-0">
-                        <span class="px-2 py-0.5 rounded text-xs font-mono text-zinc-500 bg-zinc-900/90 border border-[#27272a] group-hover:text-zinc-300 transition">
+                        <span class="hidden md:inline-block px-2 py-0.5 rounded text-xs font-mono text-zinc-500 bg-zinc-900/90 border border-[#27272a] group-hover:text-zinc-300 transition">
                             ${index + 1}
                         </span>
                         <svg class="w-4 h-4 sm:w-[18px] sm:h-[18px] text-zinc-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
@@ -482,12 +462,10 @@
 
                 const titleEl = anchor.querySelector('.link-title');
 
-                // Efeito de decodificação no hover
                 anchor.addEventListener('mouseenter', () => {
                     subtleDecode(titleEl, item.title);
                 });
 
-                // Efeito de iluminação radial no mousemove (Tailwind)
                 anchor.addEventListener('mousemove', (e) => {
                     const rect = anchor.getBoundingClientRect();
                     anchor.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
@@ -537,7 +515,6 @@
             }
         }
 
-        // Eventos de cópia (Sincronizado com os botões da imagem)
         document.getElementById('shareBtn').addEventListener('click', () => {
             copyText(window.location.href, 'Link da página copiado');
         });
@@ -585,24 +562,22 @@
         }
 
         function initDots() {
-            // Número de nós adaptável conforme largura e altura da tela
             const count = Math.min(26, Math.max(12, Math.floor((width * height) / 52000)));
             dots = [];
             for (let i = 0; i < count; i++) {
                 dots.push({
                     x: Math.random() * width,
                     y: Math.random() * height,
-                    vx: (Math.random() - 0.5) * 0.2, // Velocidade sutil
+                    vx: (Math.random() - 0.5) * 0.2,
                     vy: (Math.random() - 0.5) * 0.2
                 });
             }
         }
 
         function renderCanvas() {
-            const rgb = '52, 211, 153'; // Cor esmeralda
+            const rgb = '52, 211, 153';
             ctx.clearRect(0, 0, width, height);
 
-            // 1. Grade pontilhada (Dot-Grid) com efeito de iluminação no cursor
             const spacing = 30;
             const hoverRadius = 170;
 
@@ -619,25 +594,21 @@
                 }
             }
 
-            // 2. Nós flutuantes sutis e linhas de conexão discretas
             const linkDist = 140;
             for (let i = 0; i < dots.length; i++) {
                 const a = dots[i];
                 if (!prefersReducedMotion) {
                     a.x += a.vx;
                     a.y += a.vy;
-                    // Rebote nas bordas
                     if (a.x < 0 || a.x > width) a.vx *= -1;
                     if (a.y < 0 || a.y > height) a.vy *= -1;
                 }
 
-                // Ponto discreto
                 ctx.fillStyle = `rgba(${rgb}, 0.2)`;
                 ctx.beginPath();
                 ctx.arc(a.x, a.y, 1.3, 0, Math.PI * 2);
                 ctx.fill();
 
-                // Conexão sutil com o ponteiro do mouse
                 const dMouse = Math.hypot(a.x - mouse.x, a.y - mouse.y);
                 if (dMouse < 150) {
                     ctx.strokeStyle = `rgba(${rgb}, ${(1 - dMouse / 150) * 0.15})`;
@@ -648,7 +619,6 @@
                     ctx.stroke();
                 }
 
-                // Conexões discretas entre nós vizinhos
                 for (let j = i + 1; j < dots.length; j++) {
                     const b = dots[j];
                     const d = Math.hypot(a.x - b.x, a.y - b.y);
@@ -668,7 +638,6 @@
             }
         }
 
-        // Eventos do Canvas
         window.addEventListener('resize', resizeCanvas);
         window.addEventListener('mousemove', (e) => {
             mouse.x = e.clientX;
